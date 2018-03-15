@@ -4,12 +4,12 @@ var router = express.Router();
 /* GET users listing. */
 router.post('/', function(req, res, next) {
   res.send('OK');
-  console.log(req);
+  console.log(req.body);
 });
 
 router.get('/', function(req, res, next) {
   res.send('request OK');
-  console.log(req);
+  console.log(req.body);
 });
 
 module.exports = router;
