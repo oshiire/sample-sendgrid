@@ -5,7 +5,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.post('/', upload.fields([]), function(req, res, next) {
-  console.log(req.body);
+  console.log(req.body.text);
+  //  console.log(req.body);
   res.sendStatus(200);
 });
 
