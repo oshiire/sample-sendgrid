@@ -1,18 +1,15 @@
+// multipart/form-data を利用するためのライブラリ
 let multer = require('multer');
 let upload = multer();
+
+// express
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.post('/', upload.fields([]), function(req, res, next) {
+// Sendgrid へ送信されたメールを multipart/form-data で受信し、その内容を console へ表示する
+router.post('/', upload.fields([]), function (req, res, next) {
   console.log(req.body);
-  //  console.log(req.body);
   res.sendStatus(200);
-});
-
-router.get('/', function(req, res, next) {
-  res.send('OK');
-  console.log(req.body);
 });
 
 module.exports = router;
